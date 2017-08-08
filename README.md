@@ -44,4 +44,9 @@ true
 
 #start mining
 miner.start()
+INFO [08-08|11:13:04] Updated mining threads                   threads=0
+INFO [08-08|11:13:04] Transaction pool price threshold updated price=18000000000
+nullINFO [08-08|11:13:04] Starting mining operation 
 
+> INFO [08-08|11:13:04] Commit new mining work                   number=1 txs=0 uncles=0 elapsed=3.667ms
+ERROR[08-08|11:13:06] Failed to generate mapped ethash dataset epoch=0 err="open /Users/User1/.ethash/full-R23-0000000000000000.5577006791947779410: permission denied"
