@@ -1,3 +1,5 @@
+launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.ethereum.plist
+
 # PrivateChain
 # Launching geth & initialising genesis block
 
