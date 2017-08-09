@@ -54,18 +54,32 @@ cp /Users/User1/Desktop/extras/UppCoinFoundation/UppCoin_Development/keystore/UT
 # return account addresses you possess.
 > eth.accounts
 ["0x3ba67f916972127adee3e1349ca23dc4e6637901", "0x53254ce5fecc835c6c8925819e6bee417ea25d46"]
-#set primary account and check balance
+
+#set primary account 
 >  primary = eth.accounts[1]
 "0x53254ce5fecc835c6c8925819e6bee417ea25d46"
+
+#check balance
 > balance = web3.fromWei(eth.getBalance(primary), "ether");
 20
 
 
 #start mining
 miner.start()
-INFO [08-08|11:13:04] Updated mining threads                   threads=0
-INFO [08-08|11:13:04] Transaction pool price threshold updated price=18000000000
-nullINFO [08-08|11:13:04] Starting mining operation 
 
-> INFO [08-08|11:13:04] Commit new mining work                   number=1 txs=0 uncles=0 elapsed=3.667ms
-ERROR[08-08|11:13:06] Failed to generate mapped ethash dataset epoch=0 err="open /Users/User1/.ethash/full-R23-0000000000000000.5577006791947779410: permission denied"
+
+> miner.start()
+INFO [08-09|12:49:09] Updated mining threads                   threads=0
+INFO [08-09|12:49:09] Transaction pool price threshold updated price=18000000000
+INFO [08-09|12:49:09] Starting mining operation 
+null
+> INFO [08-09|12:49:09] Commit new mining work                   number=1 txs=0 uncles=0 elapsed=443.138µs
+> INFO [08-09|12:49:13] Generating DAG in progress               epoch=0 percentage=0 elapsed=1.807s
+INFO [08-09|12:49:15] Generating DAG in progress               epoch=0 percentage=1 elapsed=3.912s
+INFO [08-09|12:49:17] Generating DAG in progress               epoch=0 percentage=2 elapsed=5.658s
+INFO [08-09|12:49:19] Generating DAG in progress               epoch=0 percentage=3 elapsed=7.404s
+INFO [08-09|12:49:20] Generating DAG in progress               epoch=0 percentage=4 elapsed=9.211s
+INFO [08-09|12:49:22] Generating DAG in progress               epoch=0 percentage=5 elapsed=11.179s
+INFO [08-09|12:49:24] Generating DAG in progress               epoch=0 percentage=6 elapsed=13.093s
+INFO [08-09|12:49:26] Generating DAG in progress               epoch=0 percentage=7 elapsed=15.044s
+INFO [08-09|12:49:28] Generating DAG in progress               epoch=0 percentage=8 elapsed=16.971s
