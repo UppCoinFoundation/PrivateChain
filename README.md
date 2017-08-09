@@ -38,9 +38,28 @@ instance: Geth/Princess/v1.7.0-unstable-97107982/darwin-amd64/go1.8.3
 INFO [08-08|11:10:02] New wallet appeared                      url=keystore:///Users/User1/Desktop… status=Locked
 "0x3ba67f916972127adee3e1349ca23dc4e6637901"
 
+INFO [08-08|11:10:02] New wallet appeared                      url=keystore:///Users/User1/Desktop… status=Locked
+"0x53254ce5fecc835c6c8925819e6bee417ea25d46"
+
+#To add new wallet to the Custom Genesis file, adjust alloc settings & reinitate genesis file 
+
 # set it as the etherbase:
-> miner.setEtherbase(personal.listAccounts[0])
+> miner.setEtherbase(personal.listAccounts[1])
 true
+
+#copy new accounts to ethereum folder; separate terminal instance
+cp /Users/User1/Desktop/extras/UppCoinFoundation/UppCoin_Development/keystore/UTC--2017-08-0* ~/Library/Ethereum/keystore/
+
+# Take note of which account # is the one that you pre-allocated ether to
+# return account addresses you possess.
+> eth.accounts
+["0x3ba67f916972127adee3e1349ca23dc4e6637901", "0x53254ce5fecc835c6c8925819e6bee417ea25d46"]
+#set primary account and check balance
+>  primary = eth.accounts[1]
+"0x53254ce5fecc835c6c8925819e6bee417ea25d46"
+> balance = web3.fromWei(eth.getBalance(primary), "ether");
+20
+
 
 #start mining
 miner.start()
