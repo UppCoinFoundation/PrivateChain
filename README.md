@@ -14,9 +14,7 @@ INFO [08-08|09:48:29] Successfully wrote genesis state         database=lightcha
 
 >>>
  geth --identity "Princess" --rpc --rpcport "8080" --rpccorsdomain "*" --datadir "/Users/User1/Library/Ethereum" --port "21000" --nodiscover --rpcapi "db,eth,net,web3" --networkid 1987 init /Users/User1/Desktop/extras/UppCoinFoundation/UppCoin_Development/CustomGenesis.json
-
-
-
+ 
 # To interact with geth through the console
 geth --identity "Princess" --rpc --rpcport "8080" --rpccorsdomain "*" --datadir "/Users/User1/Desktop/extras/UppCoinFoundation/UppCoin_Development" --port "8443" --nodiscover --rpcapi "db,eth,net,web3" --networkid 1987 console
 
