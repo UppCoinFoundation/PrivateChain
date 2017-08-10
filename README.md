@@ -1,3 +1,8 @@
+# Installation of geth on command line MAC
+brew update
+brew upgrade
+brew tap ethereum/ethereum
+brew install ethereum
 launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.ethereum.plist
 
 # PrivateChain
