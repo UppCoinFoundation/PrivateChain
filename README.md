@@ -55,7 +55,7 @@ INFO [08-08|11:10:02] New wallet appeared                      url=keystore:///U
 #To add new wallet to the Custom Genesis file, adjust alloc settings & reinitate genesis file 
 
 # set it as the etherbase:
-> miner.setEtherbase(personal.listAccounts[1])
+> miner.setEtherbase(personal.listAccounts[0])
 true
 
 #copy new accounts to ethereum folder; separate terminal instance
@@ -67,30 +67,26 @@ cp /Users/User1/Desktop/extras/UppCoinFoundation/UppCoin_Development/keystore/UT
 ["0x3ba67f916972127adee3e1349ca23dc4e6637901", "0x53254ce5fecc835c6c8925819e6bee417ea25d46"]
 
 #set primary account 
->  primary = eth.accounts[1]
-"0x53254ce5fecc835c6c8925819e6bee417ea25d46"
+>  primary = eth.accounts[0]
+"0x3ba67f916972127adee3e1349ca23dc4e6637901"
 
 #check balance
 > balance = web3.fromWei(eth.getBalance(primary), "ether");
-20
+705
 
 
 #start mining
 miner.start()
 
-
 > miner.start()
-INFO [08-09|12:49:09] Updated mining threads                   threads=0
-INFO [08-09|12:49:09] Transaction pool price threshold updated price=18000000000
-INFO [08-09|12:49:09] Starting mining operation 
+INFO [08-10|13:09:25] Updated mining threads                   threads=0
+INFO [08-10|13:09:25] Transaction pool price threshold updated price=0
+INFO [08-10|13:09:25] Starting mining operation 
 null
-> INFO [08-09|12:49:09] Commit new mining work                   number=1 txs=0 uncles=0 elapsed=443.138µs
-> INFO [08-09|12:49:13] Generating DAG in progress               epoch=0 percentage=0 elapsed=1.807s
-INFO [08-09|12:49:15] Generating DAG in progress               epoch=0 percentage=1 elapsed=3.912s
-INFO [08-09|12:49:17] Generating DAG in progress               epoch=0 percentage=2 elapsed=5.658s
-INFO [08-09|12:49:19] Generating DAG in progress               epoch=0 percentage=3 elapsed=7.404s
-INFO [08-09|12:49:20] Generating DAG in progress               epoch=0 percentage=4 elapsed=9.211s
-INFO [08-09|12:49:22] Generating DAG in progress               epoch=0 percentage=5 elapsed=11.179s
-INFO [08-09|12:49:24] Generating DAG in progress               epoch=0 percentage=6 elapsed=13.093s
-INFO [08-09|12:49:26] Generating DAG in progress               epoch=0 percentage=7 elapsed=15.044s
-INFO [08-09|12:49:28] Generating DAG in progress               epoch=0 percentage=8 elapsed=16.971s
+> INFO [08-10|13:09:25] Commit new mining work                   number=1 txs=0 uncles=0 elapsed=277.064
+INFO [08-10|13:09:25] Generating DAG in progress               epoch=1 percentage=98 elapsed=9.826ms
+INFO [08-10|13:09:25] Generating DAG in progress               epoch=1 percentage=99 elapsed=9.929ms
+INFO [08-10|13:09:25] Successfully sealed new block            number=1 hash=ef3764…6407f6
+INFO [08-10|13:09:25] 🔨 mined potential block                  number=1 hash=ef3764…6407f6
+INFO [08-10|13:09:25] Commit new mining work                   number=2 txs=0 uncles=0 elapsed=620.408µs
+
