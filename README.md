@@ -4,6 +4,7 @@ brew upgrade
 brew tap ethereum/ethereum
 brew install ethereum
 launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.ethereum.plist
+brew install solidity
 
 # PrivateChain
 # Launching geth & initialising genesis block
