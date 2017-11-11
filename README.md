@@ -1,3 +1,5 @@
+#UppCoin
+
 # Installation of geth on command line MAC
 brew update
 brew upgrade
